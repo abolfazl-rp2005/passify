@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Passify! | create strong password!</title>
+    <meta name="title" content="Passify! | create strong password!" />
+    <meta
+      name="description"
+      content="fast and easy to use password generator! completely free to use !
+       create strong and unguesseable pass less than 10 seconds!"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="stylesheets/css/style.css" />
+  </head>
+  <body>
+    <div class="content-wrapper">
+      <div class="password-wrapper">
+        <input
+          type="text"
+          id="passwordGeneratorField"
+          readonly
+          placeholder="generated pass will be shown here!"
+        />
+        <div class="range-container">
+          <input type="range" id="passwordLength" min="6" max="30" />
+          <label id="passLengthShow">#</label>
+        </div>
+        <div class="passControlButtons">
+          <button class="btn btn1" onclick="passwordGenerator()">
+            Passify!
+          </button>
+          <button class="btn btn2" onclick="copyPassword()">Copify!</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/script.js"></script>
+</html>

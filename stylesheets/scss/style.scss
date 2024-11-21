@@ -1,0 +1,117 @@
+$background-color : #222831;
+$primary : #6C48C5;
+$secondary: #6EACDA;
+
+$font-Soria : 'Soria', sans-serif;
+@import url('https://fonts.cdnfonts.com/css/soria');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: $font-Soria;
+    letter-spacing: 5px;
+    background-color: $background-color;
+}
+.content-wrapper{
+    width: 30%;
+    margin: auto;
+}
+.password-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    .passControlButtons{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .range-container{
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        #passwordLength{
+            width: 100%;
+        }
+        #passLengthShow{
+            color: white;
+        }
+        
+    }
+}
+#passwordGeneratorField{
+    all: unset;
+    width: 100%;
+    padding: 1.2rem 0.3rem 1.2rem 0.5rem;
+    border-radius: 25px;
+    background-color: #ffffff50;
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    &::placeholder{
+        color: white;
+        font-size: 1rem;
+    }
+
+}
+
+.btn{
+    all: unset;
+    position: relative;
+    cursor: pointer;
+
+    padding: 1rem 2rem;
+    color: white;
+    border-radius: 50px;
+    &::after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: inherit;
+        clip-path: circle(0% at 50% 50%);
+        transition: clip-path 250ms ease-in;
+        z-index: -1;
+    }
+}
+.btn1{
+    border: solid 3px $primary;
+    transition: box-shadow 250ms ease-in;
+    &::after{
+        background-color: $primary;
+    }
+    &:hover{
+
+        box-shadow: 0 0 5px 3px lighten($color: $primary, $amount: 12),0 0 7px 5px darken($color: $primary, $amount: 15);
+    }
+    &:hover::after{
+        clip-path: circle(100% at 50% 50%);
+    }
+    
+}
+.btn2{
+    border: solid 3px $secondary;
+    transition: box-shadow 250ms ease-in;
+    &::after{
+        background-color: $secondary;
+    }
+    &:hover{
+
+        box-shadow: 0 0 5px 3px lighten($color: $secondary, $amount: 12),0 0 7px 5px darken($color: $secondary, $amount: 15);
+    }
+    &:hover::after{
+        clip-path: circle(100% at 50% 50%);
+    }
+}

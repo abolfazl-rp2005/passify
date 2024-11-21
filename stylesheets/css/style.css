@@ -1,0 +1,109 @@
+@import url("https://fonts.cdnfonts.com/css/soria");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Soria", sans-serif;
+  letter-spacing: 5px;
+  background-color: #222831;
+}
+
+.content-wrapper {
+  width: 30%;
+  margin: auto;
+}
+
+.password-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+.password-wrapper .passControlButtons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.password-wrapper .range-container {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+.password-wrapper .range-container #passwordLength {
+  width: 100%;
+}
+.password-wrapper .range-container #passLengthShow {
+  color: white;
+}
+
+#passwordGeneratorField {
+  all: unset;
+  width: 100%;
+  padding: 1.2rem 0.3rem 1.2rem 0.5rem;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.3137254902);
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+}
+#passwordGeneratorField::placeholder {
+  color: white;
+  font-size: 1rem;
+}
+
+.btn {
+  all: unset;
+  position: relative;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  color: white;
+  border-radius: 50px;
+}
+.btn::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  clip-path: circle(0% at 50% 50%);
+  transition: clip-path 250ms ease-in;
+  z-index: -1;
+}
+
+.btn1 {
+  border: solid 3px #6C48C5;
+  transition: box-shadow 250ms ease-in;
+}
+.btn1::after {
+  background-color: #6C48C5;
+}
+.btn1:hover {
+  box-shadow: 0 0 5px 3px #9176d4, 0 0 7px 5px #4b2e92;
+}
+.btn1:hover::after {
+  clip-path: circle(100% at 50% 50%);
+}
+
+.btn2 {
+  border: solid 3px #6EACDA;
+  transition: box-shadow 250ms ease-in;
+}
+.btn2::after {
+  background-color: #6EACDA;
+}
+.btn2:hover {
+  box-shadow: 0 0 5px 3px #9fc8e6, 0 0 7px 5px #3389c8;
+}
+.btn2:hover::after {
+  clip-path: circle(100% at 50% 50%);
+}/*# sourceMappingURL=style.css.map */
