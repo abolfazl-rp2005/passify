@@ -1,8 +1,10 @@
-$background-color : #222831;
+$background-color : #150d29;
 $primary : #6C48C5;
 $secondary: #6EACDA;
+$bg-color-secondary : #51218259;
+$shadow: #6C48C5;
 
-$font-Soria : 'Soria', sans-serif;
+$font-Soria : "Soria", sans-serif;
 @import url('https://fonts.cdnfonts.com/css/soria');
 
 *{
@@ -27,14 +29,26 @@ h1{
 }
 .content-wrapper{
     width: 30%;
+
     margin: auto;
 }
 .password-wrapper{
+    transition: box-shadow 250ms ease-out;
+    position: relative;
+    z-index: 1;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 25px;
+
+    background-color: $bg-color-secondary;
+    padding: 3rem;
+    border-radius: 25px;
+    &:hover{
+        box-shadow: 0 0 12px 3px lighten($color: $shadow, $amount: 12),0 0 12px 3px darken($color: $shadow, $amount: 7);
+
+    }
     .passControlButtons{
         width: 100%;
         display: flex;
@@ -67,6 +81,19 @@ h1{
         font-size: 1rem;
     }
 
+}
+
+.settings{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: white;
+    .option-container{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .btn{

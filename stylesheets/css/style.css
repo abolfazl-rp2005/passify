@@ -12,7 +12,7 @@ body {
   align-items: center;
   font-family: "Soria", sans-serif;
   letter-spacing: 5px;
-  background-color: #222831;
+  background-color: #150d29;
 }
 
 h1 {
@@ -26,11 +26,20 @@ h1 {
 }
 
 .password-wrapper {
+  transition: box-shadow 250ms ease-out;
+  position: relative;
+  z-index: 1;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 25px;
+  background-color: rgba(81, 33, 130, 0.3490196078);
+  padding: 3rem;
+  border-radius: 25px;
+}
+.password-wrapper:hover {
+  box-shadow: 0 0 12px 3px #9176d4, 0 0 12px 3px #5b38b1;
 }
 .password-wrapper .passControlButtons {
   width: 100%;
@@ -62,6 +71,19 @@ h1 {
 #passwordGeneratorField::placeholder {
   color: white;
   font-size: 1rem;
+}
+
+.settings {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: white;
+}
+.settings .option-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .btn {

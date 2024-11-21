@@ -16,9 +16,7 @@
   <body>
     <div class="content-wrapper">
       <div class="password-wrapper">
-        <h1>
-            passify!
-        </h1>
+        <h1>passify!</h1>
         <input
           type="text"
           id="passwordGeneratorField"
@@ -28,6 +26,18 @@
         <div class="range-container">
           <input type="range" id="passwordLength" min="6" max="30" />
           <label id="passLengthShow">#</label>
+        </div>
+        <div class="settings">
+          <div class="option-container">
+            <label>password contains uppercase</label
+            ><input type="checkbox" id="" />
+          </div><div class="option-container">
+            <label>password contains number</label
+            ><input type="checkbox" id="" />
+          </div><div class="option-container">
+            <label>password contains symbols</label
+            ><input type="checkbox" id="" />
+          </div>
         </div>
         <div class="passControlButtons">
           <button class="btn btn1" onclick="passwordGenerator()">
